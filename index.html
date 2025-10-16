@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- TOP NAVIGATION -->
+    <nav class="c">
+      <p class="welcome">Log in to get started</p>
+      <img src="logo.png" alt="Logo" class="logo" />
+      <form class="login">
+        <input
+          type="text"
+          placeholder="user"
+          class="login__input login__input--user"
+        />
+        <!-- In practice, use type="password" -->
+        <input
+          type="text"
+          placeholder="PIN"
+          maxlength="4"
+          class="login__input login__input--pin"
+        />
+        <button class="login__btn">&rarr;</button>
+      </form>
+    
+    <!-- Welcome Header Section -->
+  <div class="test-data">
+    <h1>TEST DATA</h1>
+    <h3>ID:e</h3>
+    <h3>pass:1111</h3>
+       <h3>ID:sr</h3>
+    <h3>pass:2222</h3>
+  </div>
+</nav>
+    <!-- Main Application Container -->
+    
+        <nav class="welcome-a">
+        <div class="welcome-section-a">
+            <p class="welcome-message-a">Good Morning, Hari!</p>
+        </div>
+      
+     </nav>
+     <button class="summary__value--sort">Sort</button>
+       <button class="logout">Logout</button>
+     <main class="app">
+        <!-- Balance Display Section -->
+        <div class="balance">
+            <div class="current-balance-section">
+                <p class="current-balance">Current Balance</p>
+                <p class="current-date">As of <span class="date">10/09/225</span></p>
+            </div>
+            <div class="current-balance-value">00000</div>
+        </div>
+
+        <!-- Left Column: Movements and Summary -->
+        <div class="movements-container">
+            <!-- Transaction History Section -->
+            <div class="movemnts__section">
+                <div class="movemnts__row">
+                    <div class="movemnts__row__deposite">0 Deposite</div>
+                    <div class="movemnts__date">3 days ago</div>
+                    <div class="movemnts__deposite">0000</div>
+                </div>
+                <div class="movemnts__withdrawl">
+                    <div class="movemnts__row__withdrawl">00ttt
+                    </div>
+                    <div class="movemnts__date__withdrawl">44</div>
+                    <div class="movemnts__withdrawl__amount">55</div>
+                </div>
+            </div>
+ </div>
+            <!-- Summary Statistics -->
+            <div class="summary">
+                <p class="summary__label">IN</p>
+                <p class="summary__value summary__value--in">0000</p>
+                <p class="summary__label">OUT</p>
+                <p class="summary__value summary__value--out">0000</p>
+                <p class="summary__label">Interest</p>
+                <p class="summary__value summary__value--interest">0000</p>
+               
+            </div>
+        
+
+        <!-- Right Column: Operations -->
+        <div class="operations-container">
+            <!-- Transfer Money Operation -->
+            <div class="operation operation__transfers">
+                <h2 class="money">Transfer money</h2>
+                <form class="from form__transfers">
+                    <div class="input_wrapper">
+                        <input type="text" class="form__input form__input--to">
+                        <input type="number" class="form__input form__input--amount">
+                        <button class="form__btn form__btn--transfer">&rarr;</button>
+                    </div>
+                    <label class="form__label__transfer">Transfer to</label>
+                    <label class="form__label__amount">Amount</label>
+                </form>
+            </div>
+
+            <!-- Request Loan Operation -->
+            
+            <div class="operation__loan">
+                <h2 class="loan">Request Loan</h2>
+                <form class="from form__transfers">
+                    <div class="input_wrapper">
+                        <input type="number" class="form__input form__input--loan">
+                        <button class="form__btn form__btn--loan">&rarr;</button>
+                    </div>
+                    <label class="form__label__loan">Amount</label>
+                </form>
+            </div>
+
+            <!-- Close Account Operation -->
+            <div class="operation_close">
+                <h2 class="close">Close Account</h2>
+                <form class="from form__transfers">
+                    <div class="input_wrapper">
+                        <input type="text" class="form__input form__input--user">
+                        <input type="number" class="form__input form__input--pin" >
+                        <button class="form__btn form__btn--close">&rarr;</button>
+                    </div>
+                    <label class="form__label__user">User ID</label>
+                    <label class="form__label__pin">Pin</label>
+                </form>
+            </div>
+            
+        </div>
+    </main>
+     <script src="script.js"></script>
+</body>
+</html>
