@@ -1,0 +1,781 @@
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #444;
+    background-color: #f3f3f3;
+    min-height: 100vh;
+    padding: 2rem;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   WELCOME SECTION
+   ======================================== */
+.welcome-a {
+ 
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+.login__btn{
+    cursor: pointer;
+}
+.logout{
+     cursor: pointer;
+       position: absolute;
+  top: 40px;
+  left: 445px;
+ 
+
+}
+
+.welcome-section-a {
+    display: flex;
+    gap: 510px;
+}
+
+.welcome-message-a {
+    margin-top: -80px;
+    position: relative;
+    left: -5rem;
+    font-weight: bold;
+}
+
+/* ========================================
+   MAIN LAYOUT
+   ======================================== */
+.app {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding: 30px;
+    font-weight: bold;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========================================
+   BALANCE SECTION
+   ======================================== */
+.balance {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.current-balance-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.current-balance {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.current-date {
+    font-size: 12px;
+    margin-left: 2px;
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+.current-balance-value {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ========================================
+   MOVEMENTS CONTAINER (Left Column)
+   ======================================== */
+.movements-container {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
+     width: 105%;
+     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    border-radius: 10px;
+    height: 27rem;
+    overflow-y: auto;
+}
+
+/* Transaction History Section */
+.movements__section {
+    grid-row: 2;
+    grid-column: 1;
+    width: 50%;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    border-radius: 50px;
+    height: auto; /* flexible height */
+}
+
+
+
+.movemnts__row {
+    display: flex;
+    gap: 60px;
+    padding: 5px;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    font-weight: bold;
+}
+
+.movemnts__row__deposite {
+    margin-bottom: 3px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #66c873;
+}
+
+.movemnts__row__withdrawl {
+    color: #f5465d;
+     font-size: 0.9rem;
+
+}
+
+
+.movemnts__withdrawl {
+    display: flex;
+    gap: 52px;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+    padding: 5px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.movemnts__date__withdrawl {
+    position: relative;
+    right: 10px;
+    font-weight: bold;
+}
+
+.movemnts__withdrawl__amount {
+    position: relative;
+    right: 8px;
+}
+
+/* Summary Statistics */
+.summary {
+    grid-column: 1 / -1;
+    position: relative;
+    left: 1.3rem;
+    display: flex;
+    gap: 1.3rem;
+    margin-top: 4rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.summary__value {
+    font-size: large;
+    position: relative;
+    bottom: 5px;
+    color: #f5465d;
+}
+
+.summary__label {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.summary__value--in {
+    color: #66c873;
+}
+
+.summary__value--interest {
+    color: #66c873;
+}
+
+/* ========================================
+   OPERATIONS CONTAINER (Right Column)
+   ======================================== */
+.operations-container {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Base Operation Styles */
+.operation {
+    border-radius: 1rem;
+    padding: 3rem 4rem;
+    color: #333;
+    width: 20%;
+    height: 50px;
+}
+
+/* Transfer Money Operation */
+.operation__transfers {
+    position: absolute;
+    bottom: 12rem;
+    height: 9rem;
+    width: 20%;
+    background-color: #66c873;
+    background: linear-gradient(132deg, rgb(0, 103, 154) 0.00%, rgb(0, 173, 239) 100.00%);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+/* Request Loan Operation */
+.operation__loan {
+    background-color: #66c873;
+    position: relative;
+    bottom: 220px;
+    height: 9rem;
+    width: 60%;
+    color: whitesmoke;
+    background: #020024;
+    background: linear-gradient(179.1deg, rgb(43, 170, 96) 2.3%, rgb(129, 204, 104) 98.3%);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+/* Close Account Operation */
+.operation_close {
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    background-color: #66c873;
+    position: relative;
+    top: 220px;
+    height: 9rem;
+    width: 60%;
+    color: white;
+    background: #020024;
+    background: #FCB928;
+    background: linear-gradient(135deg, #FCB928, #E59835);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+/* ========================================
+   FORM ELEMENTS
+   ======================================== */
+.form__input {
+    height: 1.4rem;
+    width: 25%;
+    position: relative;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form__input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form__label__transfer {
+    position: relative;
+    font-weight: 200;
+    font-size: 7px;
+    left: 4px;
+    position: relative;
+    top: 5px;
+}
+
+.form__label__amount {
+    position: relative;
+    font-weight: 200;
+    font-size: 7px;
+    left: 2rem;
+    position: relative;
+    top: 5px;
+}
+
+.form__btn {
+    height: 1.4rem;
+    width: 10%;
+    text-align: center;
+    position: relative;
+    top: 3px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form__btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.input_wrapper {
+    position: relative;
+    top: 5px;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.form__input--amount {
+    position: relative;
+    left: 5px;
+}
+
+.form__input--loan {
+    width: 50%;
+}
+
+/* ========================================
+   OPERATION TITLES
+   ======================================== */
+.money {
+    position: relative;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.loan {
+    position: relative;
+    bottom: 2px;
+    right: -1rem;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* ========================================
+   SPECIFIC FORM INPUTS
+   ======================================== */
+.form__input {
+    position: relative;
+    bottom: 2rem;
+    right: 2rem;
+    width: 36%;
+    margin-right: -20px;
+    margin-top: 5px;
+}
+
+.form__label__transfer {
+    position: relative;
+    top: -1.5rem;
+    bottom: 2rem;
+    margin-top: -5px;
+    margin-left: -18px;
+}
+
+.form__label__amount {
+    position: relative;
+    top: -1.5rem;
+}
+
+.operation__loan {
+    position: relative;
+    top: -62rem;
+    height: 9rem;
+    width: 70%;
+}
+
+.form__input--loan {
+    position: relative;
+    bottom: -1px;
+    right: -1rem;
+    width: 36%;
+    margin-top: -5px;
+}
+
+.form__label__loan {
+    position: relative;
+    bottom: -5px;
+    font-size: 8px;
+    margin-top: 10px;
+    margin-left: 19px;
+    font-weight: 200;
+    color: #333;
+}
+
+.operation_close {
+    position: relative;
+    top: -92rem;
+    height: 9rem;
+    width: 70%;
+    background-color: #f5465d;
+    color: #333;
+}
+
+.form__input--user {
+    position: relative;
+    bottom: -1px;
+    right: -1rem;
+    width: 24%;
+    margin-top: -5px;
+}
+
+.form__input--pin {
+    position: relative;
+    bottom: -1px;
+    right: -3.5rem;
+    width: 24%;
+    margin-top: -5px;
+}
+
+/* ========================================
+   BUTTON STYLES
+   ======================================== */
+.form__btn--close {
+    margin-left: 50px;
+}
+
+.form__btn--loan {
+    margin-left: 25px;
+}
+
+.form__btn--transfer {
+    margin-left: 25px;
+    position: relative;
+    top: -18px;
+    width: 20px;
+    text-align: center;
+    left: 3px;
+}
+
+/* ========================================
+   FORM LABELS
+   ======================================== */
+.form__label__user {
+    position: relative;
+    bottom: -5px;
+    font-size: 8px;
+    margin-top: 10px;
+    margin-left: 19px;
+    font-weight: 200;
+    color: #333;
+}
+
+.form__label__pin {
+    position: relative;
+    bottom: -5px;
+    font-size: 8px;
+    margin-top: 10px;
+    margin-left: 22px;
+    font-weight: 200;
+    color: #333;
+}
+
+/* ========================================
+   LAYOUT OVERRIDES
+   ======================================== */
+.movemnts__section {
+    grid-column: 1;
+}
+
+.operation,
+.operation__loan,
+.operation_close {
+    grid-column: 2;
+    grid-row: auto;
+    position: static;
+    width: 100%;
+    height: auto;
+    min-height: 9rem;
+    margin-top: 1rem;
+}
+
+.operation:first-of-type {
+    margin-top: 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .app {
+        grid-template-columns: 1fr 320px;
+        gap: 1.2rem;
+        padding: 1.6rem;
+    }
+    
+    .balance {
+        margin-bottom: 0;
+    }
+    
+    .movemnts__section {
+        width: 100%;
+        margin-top: 0.8rem;
+        height: auto;
+    }
+    
+    .operation,
+    .operation__loan,
+    .operation_close {
+        width: 100%;
+        position: static;
+        margin-top: 0.8rem;
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
+    
+    .summary {
+        position: static;
+        bottom: auto;
+        left: 0;
+        margin-top: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .app {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .balance {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .current-balance-value {
+        align-self: flex-end;
+    }
+    
+    .movemnts__section {
+        width: 100%;
+    }
+    
+    .operation,
+    .operation__loan,
+    .operation_close {
+        width: 60%;
+    }
+    
+    .summary {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+.money{
+    position: relative;
+    bottom:-3px;
+    right:1px;
+    margin-bottom: 10px;
+}
+.form__input--to,.form__input--amount{
+    position: relative;
+    top:-5px;
+    left:5px;
+    width: 25%;
+}
+.form__input--amount{
+    position: relative;
+    left: 30px;
+}
+.form__label__amount{
+    position: relative;
+    top:2px;
+    left:60px;
+    width: 25%; 
+}
+.form__label__transfer{
+    position: relative;
+    top:2px;
+    left:30px;
+}
+.form__btn--transfer{
+    position: relative;
+    top:-3px;
+    left:30px;  
+}
+.current-balance-value{
+    position: relative;
+      top:-38px;
+    left:150px;
+}
+.movements-container{
+    position: relative;
+    top: -20px;
+}
+.form__input--loan{
+    position: relative;
+    top: -3px;
+}
+.form__btn--loan{
+   position: relative;
+    top: -5px;  
+}
+.form__label__loan{
+       position: relative;
+    top: 3px;
+}
+.close{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.form__input--user,.form__input--pin{
+      width: 25%;
+          position: relative;
+    top: 5px;
+}
+.form__label__user{
+      position: relative;
+    top: 11px;
+}
+.form__label__pin{
+      position: relative;
+    top: 11px;
+    left: 5px;  
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.welcome {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.logo {
+  height: 5.25rem;
+}
+
+.login {
+  display: flex;
+}
+
+.login__input {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  margin-right: 1rem;
+  color: inherit;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+.login__input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.login__input::placeholder {
+  color: #bbb;
+}
+
+.login__btn {
+  border: none;
+  background: none;
+  font-size: 2.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login__btn:hover,
+.login__btn:focus,
+.btn--sort:hover,
+.btn--sort:focus {
+  outline: none;
+  color: #777;
+}
+.app{
+    opacity: 0;
+
+    /* transition: all 1s; */
+}
+.c{
+    /* opacity: 0; */
+}
+.welcome-message-a{
+    margin-right: 500px;
+    font-size: 1.2rem;
+    margin-bottom: -20px;
+      transform: translate(20px, -20px);
+
+}
+.app{
+  transform: translate(5px, -60px);
+  position: relative;
+
+}
+.operations-container{
+    transform: translate(30px, -300px); 
+}
+.movemnts__row__deposite{
+    color: #66c873;
+}
+.test-data{
+opacity: 1;
+}
+.welcome-a{
+    opacity: 0;
+}
+.c{
+    opacity: 1;
+
+}
+.logout{
+    opacity: 0;
+}
+.summary__value--sort{
+    position: relative;
+    top:-5.6rem;
+    left:42.5rem;
+    width: 4rem;
+    cursor: pointer;
+    opacity: 0;
+}
+.movemnts__row__withdrawl{
+    color: #f5465d;
+}
+
